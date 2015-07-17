@@ -1,7 +1,9 @@
 package ng.com.cc.app.entity;
 
+// Code by lanre
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 
 @Entity
 public class SampleModel extends BaseModel {
@@ -24,9 +26,11 @@ public class SampleModel extends BaseModel {
         setCode(code);
     }
 
+
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -38,8 +42,8 @@ public class SampleModel extends BaseModel {
         return code;
     }
 
+
     public void setCode(String code) {
         this.code = code;
     }
-
 }
