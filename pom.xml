@@ -4,7 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ng.com.cc.app</groupId>
 	<artifactId>ShopKeeper</artifactId>
-	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>ShopKeeper Maven Springboot Webapp</name>
 
@@ -58,16 +57,16 @@
 			<groupId>commons-digester</groupId>
 			<artifactId>commons-digester</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>1.2</version>
-		</dependency>
+		</dependency>-->
 		<!-- WHY YOU? -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
+ 			<scope>provided</scope> 
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -93,6 +92,42 @@
 			<artifactId>tiles-extras</artifactId>
 			<version>3.0.5</version>
 		</dependency>
+		<dependency> 
+		     <groupId>org.springframework</groupId> 
+		     <artifactId>spring-aspects</artifactId> 
+	     </dependency>
+	     <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-feed</artifactId>
+            <version>4.0.4.RELEASE</version>
+            <exclusions>
+	            <exclusion>
+		            <groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+	            </exclusion>
+	            <exclusion>
+	            	<artifactId>commons-logging-api</artifactId>
+	            	<groupId>commons-logging</groupId>
+	            </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+	        <groupId>com.oracle</groupId>
+	        <artifactId>ojdbc14</artifactId>
+	        <version>10.2.0.4.0</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<plugins>
